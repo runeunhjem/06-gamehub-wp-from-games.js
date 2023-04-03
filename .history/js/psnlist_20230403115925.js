@@ -71,7 +71,6 @@ setTimeout(() => {
 
   gamesContainer.innerHTML = html;
 }, 1000);
-
 // Select all game containers
 // document.addEventListener("DOMContentLoaded", function () {
 setTimeout(() => {

@@ -1,7 +1,7 @@
 // import { games } from "./db.js";
 import { games } from "./games.js";
 console.log("games import from line 1: ", games);
-// setTimeout(() => {
+setTimeout(() => {
   // const games = [{}];
   // const heartIcon = games.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
   // console.log(games.isWishlisted); // UNDEFINED
@@ -19,12 +19,11 @@ console.log("games import from line 1: ", games);
     console.log("gameID on line 16 with games.js is: ", gameID);
 
     // Find the game object with the matching ID
-    setTimeout(() => {
-      const game = games.find((game) => game.id === gameID);
-      console.log("game on line 20 with games.js is: ", game);
-      // Set the game title as the page title
-      document.title = game.itemName;
-    }, 1000);
+    const game = games.find((game) => game.id === gameID);
+    console.log("game on line 20 with games.js is: ", game);
+
+    // Set the game title as the page title
+    document.title = game.itemName;
 
     gamesContainer.innerHTML = `
     <div class="main__wrapper">
@@ -281,4 +280,4 @@ console.log("games import from line 1: ", games);
   if (gamesContainer) {
     gamesContainer.addEventListener("click", addToWishlist);
   }
-// }, 5000);
+}, 5000);

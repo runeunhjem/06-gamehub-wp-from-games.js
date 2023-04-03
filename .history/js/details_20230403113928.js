@@ -1,7 +1,7 @@
 // import { games } from "./db.js";
 import { games } from "./games.js";
 console.log("games import from line 1: ", games);
-// setTimeout(() => {
+setTimeout(() => {
   // const games = [{}];
   // const heartIcon = games.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
   // console.log(games.isWishlisted); // UNDEFINED
@@ -281,4 +281,4 @@ console.log("games import from line 1: ", games);
   if (gamesContainer) {
     gamesContainer.addEventListener("click", addToWishlist);
   }
-// }, 5000);
+}, 5000);

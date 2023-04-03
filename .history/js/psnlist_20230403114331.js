@@ -3,16 +3,15 @@ import { games } from "./games.js";
 
 const gamesContainer = document.getElementById("games-container");
 export { gamesContainer };
-setTimeout(() => {
-  // Generate the HTML for all the games
-  const html = games
-    .map((game) => {
-      // Determine which heart icon to display based on isWishlisted
-      const heartIcon = game.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
-      const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
-      console.log("game before creating gamesContainer HTML: ", game);
 
-      return `
+// Generate the HTML for all the games
+const html = games.map(game => {
+
+  // Determine which heart icon to display based on isWishlisted
+  const heartIcon = game.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
+  const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
+
+  return `
   <div class="container game-cards" data-filter="${game.platform}-${game.type}">
     <div class="items ${game.itemName}">
       <div class="psnleft game-title">
@@ -65,12 +64,10 @@ setTimeout(() => {
         </a>
       </div>
     </div>
-    `;
-    })
-    .join("");
-
-  gamesContainer.innerHTML = html;
-}, 1000);
+       `;
+}).join("");
+console.log("game before creating gamesContainer HTML: ");
+gamesContainer.innerHTML = html;
 
 // Select all game containers
 // document.addEventListener("DOMContentLoaded", function () {

@@ -281,4 +281,4 @@ console.log("games import from line 1: ", games);
   if (gamesContainer) {
     gamesContainer.addEventListener("click", addToWishlist);
   }
-// }, 5000);
+}, 5000);

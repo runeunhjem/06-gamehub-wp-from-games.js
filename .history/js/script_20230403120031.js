@@ -146,7 +146,7 @@ setTimeout(() => {
       const type = game.type;
       const releaseDate = game.releaseDate;
       const region = game.region;
-      const isWishlisted = game.isWishlisted;
+      const 
       const platform = game.platform;
       const gamespotRating = game.gamespotRating;
       const total = currentPrice * 1;
