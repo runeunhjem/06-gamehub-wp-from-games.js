@@ -26,7 +26,7 @@ cart.forEach((item, index) => {
 
   totalQuantity = item.quantity;
   totalPrice = item.quantity * item.price;
-
+  
   console.log("cart is: ", cart);
   cartContainer.innerHTML += `
     <div class="cart-item">
@@ -71,11 +71,6 @@ document.addEventListener('input', function(event) {
     const index = parseInt(target.dataset.index);
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart[index].quantity = parseInt(target.value);
-
-    if (cart[index].quantity === 0) {
-      cart.splice(index, 1); // remove the game from the cart
-    }
-
     localStorage.setItem('cart', JSON.stringify(cart));
     location.reload();
 
@@ -136,7 +131,7 @@ cartsummary.innerHTML += `
   <div class="filler row2">.</div>
   <div class="filler row2"></div>
   <div class="amount_before row2 price__before__top yellow">
-
+    
   </div>
   <div class="row3 vat">(VAT included if applicable)</div>
   <div class="row3 filler"></div>
@@ -159,7 +154,7 @@ cartsummary.innerHTML += `
   <div class="filler row7"></div>
   <div class="filler row7"></div>
   <div class="price__before__bottom yellow row7">
-
+    
   </div>
   <div class="row8 vat">(VAT included if applicable)</div>
   <div class="row8 filler"></div>

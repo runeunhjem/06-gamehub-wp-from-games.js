@@ -64,6 +64,23 @@ cart.forEach((item, index) => {
   cartTotalPrice += item.quantity * item.price;
 });
 
+// //Update quantity
+// document.addEventListener('input', function(event) {
+//   const target = event.target;
+//   if (target && target.matches('.howmany')) {
+//     const index = parseInt(target.dataset.index);
+//     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+//     cart[index].quantity = parseInt(target.value);
+//     localStorage.setItem('cart', JSON.stringify(cart));
+//     location.reload();
+
+//     // Update the quantity in the cart item element
+//     const cartItem = document.querySelector(`#cart-item-${index}`);
+//     const quantityElement = cartItem.querySelector('.cart-item-quantity');
+//     quantityElement.textContent = cart[index].totalQuantity;
+//   };
+// });
+
 //Update quantity
 document.addEventListener('input', function(event) {
   const target = event.target;
