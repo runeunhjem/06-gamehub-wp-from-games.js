@@ -241,11 +241,13 @@ footer a {
 }
 
 .topnav__mob {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 360px;
   padding: 0;
+  z-index: 10000;
 }
 
 .topnav__mob .menu {
