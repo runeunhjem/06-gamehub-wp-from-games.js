@@ -7,14 +7,13 @@ export { gamesContainer };
 const wishlistedGames = JSON.parse(localStorage.getItem("wishlist")) || [];
 console.log("wishlistedGames is: ", wishlistedGames);
 
-games.forEach((game) => {
-  // Check if the game is in the wishlisted games array
-  if (wishlistedGames.includes(parseInt(game.id))) {
-    // If the game is wishlisted, set its isWishlisted value to 1
-    game.isWishlisted = 1;
-  }
-});
 setTimeout(() => {
+  games.forEach((game) => {
+    // Check if the game is in the wishlisted games array
+    if (wishlistedGames.includes(parseInt(game.id))) {
+      // If the game is wishlisted, set its isWishlisted value to 1
+      parseInt(game.isWishlisted = 1;
+    }
     // Generate the HTML for all the games
     const html = games
       .map((game) => {
@@ -86,7 +85,7 @@ setTimeout(() => {
       .join("");
 
     gamesContainer.innerHTML = html;
-
+  });
 }, 500);
 
 // Select all game containers

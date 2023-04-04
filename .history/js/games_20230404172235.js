@@ -27,7 +27,7 @@ fetch(apiUrl)
         currentPrice: parseFloat(attributes[7].currentPrice),
         beforePrice: parseFloat(attributes[8].beforePrice),
         gamespotRating: attributes[9].gamespotRating,
-        isWishlisted: parseInt(attributes[10].isWishlisted),
+        isWishlisted: parseInt(attributes[10].isWishlisted,
         coverImage: attributes[11].coverImage,
         productOverview: attributes[12].productOverview,
         productDescription: attributes[13].productDescription,

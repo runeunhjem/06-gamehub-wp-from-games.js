@@ -21,17 +21,17 @@ fetch(apiUrl)
     for (const item of data) {
       const attributes = item.attributes.map((attr) => ({ [attr.name]: attr.terms[0].name }));
       const game = {
-        id: parseInt(attributes[0].gameId),
+        id: attributes[0].gameId,
         itemName: attributes[1].itemName,
         platform: attributes[2].platform,
         platformShort: attributes[3].platformShort,
         type: attributes[4].type,
         region: attributes[5].region,
         releaseDate: attributes[6].releaseDate,
-        currentPrice: parseFloat(attributes[7].currentPrice),
-        beforePrice: parseFloat(attributes[8].beforePrice),
+        currentPrice: attributes[7].currentPrice,
+        beforePrice: attributes[8].beforePrice,
         gamespotRating: attributes[9].gamespotRating,
-        isWishlisted: parseInt(attributes[10].isWishlisted),
+        isWishlisted: attributes[10].isWishlisted,
         coverImage: attributes[11].coverImage,
         productOverview: attributes[12].productOverview,
         productDescription: attributes[13].productDescription,
@@ -55,25 +55,22 @@ fetch(apiUrl)
     // setTimeout(() => {
     // CREATE HTML WITH DEATILS FROM API
     function createDetails() {
-      console.log("games on line 57 inside after createDetails with NO games.js is: ", games);
+      // console.log("games on line 57 inside after createDetails with NO games.js is: ", games);
       const queryString = window.location.search;
       const params = new URLSearchParams(queryString);
       const gameID = parseInt(params.get("id"));
-      console.log("gameID on line 16 with games.js is: ", gameID);
-      console.log("gameID on line 16 with games.js is: ", typeof gameID);
+      // console.log("gameID on line 16 with games.js is: ", gameID);
+      // console.log("gameID on line 16 with games.js is: ", typeof gameID);
 
       // Find the game object with the matching ID
       // setTimeout(() => {
-
-      const game = games.find((game) => parseInt(game.id) === gameID);
-      console.log("game.isWishlisted on line 70 with games.js is: ", game.isWishlisted);
-      const heartIcon = game.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
-      const wishlistedGames = JSON.parse(localStorage.getItem("wishlist")) || [];
-      console.log("wishlistedGames is: ", wishlistedGames);
-      const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
+        const game = games.find((game) => parseInt(game.id) === gameID);
+        const heartIcon = game.isWishlisted) === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
+        const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
+      // console.log("game on line 20 with games.js is: ", game);
       // Set the game title as the page title
       document.title = game.itemName;
-
+      // }, 1000);
 
       gamesContainer.innerHTML = `
         <div class="main__wrapper">
@@ -87,9 +84,7 @@ fetch(apiUrl)
                       <h2 class="h4 yellow type">${game.platformShort} ${game.type} Version</h2>
                     </div>
                     <div class="game-cover">
-                      <a href=${
-                        game.coverImage
-                      } target="_blank" alt="Click to open image in new window" aria-label="Click to open image in new window">
+                      <a href=${game.coverImage} target="_blank" alt="Click to open image in new window" aria-label="Click to open image in new window">
                         <img src=${game.coverImage} alt="${game.itemName} ${game.platform} | ${game.type} Version">
                       </a>
                     </div>

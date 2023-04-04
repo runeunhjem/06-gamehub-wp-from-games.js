@@ -67,9 +67,10 @@ fetch(apiUrl)
 
       const game = games.find((game) => parseInt(game.id) === gameID);
       console.log("game.isWishlisted on line 70 with games.js is: ", game.isWishlisted);
-      const heartIcon = game.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
+      // const heartIcon = game.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
       const wishlistedGames = JSON.parse(localStorage.getItem("wishlist")) || [];
       console.log("wishlistedGames is: ", wishlistedGames);
+
       const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
       // Set the game title as the page title
       document.title = game.itemName;

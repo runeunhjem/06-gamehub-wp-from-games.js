@@ -67,15 +67,23 @@ fetch(apiUrl)
 
       const game = games.find((game) => parseInt(game.id) === gameID);
       console.log("game.isWishlisted on line 70 with games.js is: ", game.isWishlisted);
-      const heartIcon = game.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
+      // const heartIcon = game.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
       const wishlistedGames = JSON.parse(localStorage.getItem("wishlist")) || [];
       console.log("wishlistedGames is: ", wishlistedGames);
-      const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
-      // Set the game title as the page title
-      document.title = game.itemName;
+      setTimeout(() => {
+        let heartIcon;
+        if (wishlistedGames.includes(parseInt(game.id))) {
+          heartIcon = "images/ico_heart.svg";
+        } else {
+          heartIcon = "images/ico_heart_+.svg";
+        }
 
+        const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
+        // Set the game title as the page title
+        document.title = game.itemName;
+        // }, 1000);
 
-      gamesContainer.innerHTML = `
+        gamesContainer.innerHTML = `
         <div class="main__wrapper">
           <section class="product_details" aria-label="Product Details | Main Section">
             <h1>${game.itemName}</h1>
@@ -117,7 +125,9 @@ fetch(apiUrl)
                     </div>
                     <div class="togglewishlist add-to-wishlist">
                       <span class="small psnright" href="wishlist.html">
-                        <img class="remove small psnright add-to-wishlist wishlist-icon" src="${heartIcon}" alt="Add to wishlist" data-id="${parseInt(game.id)}">
+                        <img class="remove small psnright add-to-wishlist wishlist-icon" src="${heartIcon}" alt="Add to wishlist" data-id="${parseInt(
+          game.id
+        )}">
                       </span>
                     </div>
                     <label for="quantity" class="ourprice psnright">Quantity:</label>
@@ -182,7 +192,7 @@ fetch(apiUrl)
           </section>
         </div>
         `;
-
+      }, 1000);
       // Calculate Price
       const quantityInput = document.getElementById("quantity");
       const price = parseFloat(game.currentPrice);

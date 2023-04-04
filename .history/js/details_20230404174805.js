@@ -64,16 +64,14 @@ fetch(apiUrl)
 
       // Find the game object with the matching ID
       // setTimeout(() => {
-
+        
       const game = games.find((game) => parseInt(game.id) === gameID);
       console.log("game.isWishlisted on line 70 with games.js is: ", game.isWishlisted);
       const heartIcon = game.isWishlisted === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
-      const wishlistedGames = JSON.parse(localStorage.getItem("wishlist")) || [];
-      console.log("wishlistedGames is: ", wishlistedGames);
       const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
       // Set the game title as the page title
       document.title = game.itemName;
-
+      // }, 1000);
 
       gamesContainer.innerHTML = `
         <div class="main__wrapper">
@@ -87,9 +85,7 @@ fetch(apiUrl)
                       <h2 class="h4 yellow type">${game.platformShort} ${game.type} Version</h2>
                     </div>
                     <div class="game-cover">
-                      <a href=${
-                        game.coverImage
-                      } target="_blank" alt="Click to open image in new window" aria-label="Click to open image in new window">
+                      <a href=${game.coverImage} target="_blank" alt="Click to open image in new window" aria-label="Click to open image in new window">
                         <img src=${game.coverImage} alt="${game.itemName} ${game.platform} | ${game.type} Version">
                       </a>
                     </div>

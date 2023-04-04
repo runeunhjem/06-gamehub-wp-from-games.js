@@ -13,8 +13,7 @@ games.forEach((game) => {
     // If the game is wishlisted, set its isWishlisted value to 1
     game.isWishlisted = 1;
   }
-});
-setTimeout(() => {
+  setTimeout(() => {
     // Generate the HTML for all the games
     const html = games
       .map((game) => {
@@ -86,7 +85,7 @@ setTimeout(() => {
       .join("");
 
     gamesContainer.innerHTML = html;
-
+  });
 }, 500);
 
 // Select all game containers
