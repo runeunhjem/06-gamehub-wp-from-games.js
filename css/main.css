@@ -1399,8 +1399,13 @@ legend {
   background-position: left;
 }
 
-#games-container {
+.weeks-featured {
+  text-align: center;
+}
+
+#games-container, #featured-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
 }
