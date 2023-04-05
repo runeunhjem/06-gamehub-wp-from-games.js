@@ -319,7 +319,7 @@
 
 
 
-// SORT SECTION
+  // SORT SECTION
 const sortSelect = document.getElementById("sort");
 const sortAreOnPage = document.querySelector(".search-container");
 if (sortAreOnPage) {
@@ -337,7 +337,7 @@ if (sortAreOnPage) {
     }
 
       // Regenerate the HTML for the sorted games
-      const sortedHtml = sortedGames
+      const sorted = filteredGames
         .map((game) => {
           const heartIcon = parseInt(game.isWishlisted) === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
           const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
@@ -400,6 +400,6 @@ if (sortAreOnPage) {
       .join("");
 
       // Set the HTML of the gamesContainer element to the filtered HTML
-      gamesContainer.innerHTML = sortedHtml;
+      gamesContainer.innerHTML = filteredHtml;
     });
   };

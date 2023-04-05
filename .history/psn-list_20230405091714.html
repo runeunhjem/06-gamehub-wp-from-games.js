@@ -22,10 +22,10 @@
     <!-- <link rel="stylesheet" href="css/psnlist.css"> -->
     <link rel="stylesheet" href="css/out-of-view-menu-text.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- <script defer src="js/wishlist.js" type="module"></script> -->
     <script defer src="js/script.js" type="module"></script>
-    <script defer src="js/search.js" type="module"></script>
-
-    <title>Game Hub | Search Results</title>
+    <script defer src="js/psnlist.js" type="module"></script>
+    <title>Game Hub | Playstation Games</title>
   </head>
   <body>
     <header>
@@ -91,36 +91,34 @@
     <main id="main">
       <div class="main__wrapper">
         <section class="psn-grid" aria-label="Playstation Page | Main Section">
-          <h2 class="playstation-list-header">Search Results</h2>
+          <h2 class="playstation-list-header">Playstation</h2>
           <fieldset id="search-field">
             <legend>Filter</legend>
             <div class="search-container">
-              <div class="number-of-products">Number of games on site: 15</div>
               <div class="filter-section">
-                <div class="choose-filter" id="choose-filter">
-                  <label for="filters">Choose your filter:</label>
-                  <select id="filters" name="filters">
-                    <option value="">Choose your filter</option>
-                    <option value="Playstation 4">Playstation 4</option>
-                    <option value="Playstation 5">Playstation 5</option>
-                    <option value="Full Disc Versions">Full Disc Versions</option>
-                    <option value="Key only Versions">Key only Versions</option>
-                  </select>
-                </div>
-                <div class="choose-sort" id="choose-sort">
-                  <label for="sort">Choose your sorting option:</label>
-                  <select id="sort" name="sort">
-                    <option value="">Sort by</option>
-                    <option value="Price (low to high)">Price (low to high)</option>
-                    <option value="Price (high to low)">Price (high to low)</option>
-                    <option value="Release date (newest first)">Release date (newest first)</option>
-                    <option value="Release date (oldest first)">Release date (oldest first)</option>
-                  </select>
-                </div>
+                <div class="number-of-products">Number of games on site: 15</div>
+                <label for="filters">Choose your filter:</label>
+                <select id="filters" name="filters">
+                  <option value="">Choose your filter</option>
+                  <option value="Playstation 4">Playstation 4</option>
+                  <option value="Playstation 5">Playstation 5</option>
+                  <option value="Full Disc Versions">Full Disc Versions</option>
+                  <option value="Key only Versions">Key only Versions</option>
+                </select>
+                <label for="sort">Sort the games:</label>
+                <select id="sort" name="sort">
+                  <option value="">Choose your filter</option>
+                  <option value="Playstation 4">Playstation 4</option>
+                  <option value="Playstation 5">Playstation 5</option>
+                  <option value="Full Disc Versions">Full Disc Versions</option>
+                  <option value="Key only Versions">Key only Versions</option>
+                </select>
               </div>
             </div>
           </fieldset>
-          <div class="image-mockup psn__wrapper" id="games-container"></div>
+          <div class="image-mockup psn__wrapper" id="games-container">
+            <!-- <div class="game-container" id="game-container"></div> -->
+          </div>
         </section>
         <div class="spacer"></div>
       </div>

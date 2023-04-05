@@ -319,7 +319,7 @@
 
 
 
-// SORT SECTION
+  // SORT SECTION
 const sortSelect = document.getElementById("sort");
 const sortAreOnPage = document.querySelector(".search-container");
 if (sortAreOnPage) {
@@ -400,6 +400,6 @@ if (sortAreOnPage) {
       .join("");
 
       // Set the HTML of the gamesContainer element to the filtered HTML
-      gamesContainer.innerHTML = sortedHtml;
+      gamesContainer.innerHTML = Html;
     });
   };

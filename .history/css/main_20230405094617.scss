@@ -1162,9 +1162,9 @@ input {
   }
 }
 #filters, #sort {
-  width: 250px;
+  width: 200px;
   padding: 5px;
-  margin-top: 5px;
+  margin-top: 15px;
   color: #7b7a7a;
   background-color: var(--color-black);
 }
@@ -1427,6 +1427,11 @@ legend {
 }
 
 
+#choose-sort, #choose-filter {
+  display: block;
+  max-width: 300px;
+}
+
 #search-field {
   display: flex;
   // width: 260px;
@@ -1439,20 +1444,14 @@ legend {
   margin-bottom: 1em;
   flex-wrap: wrap;
   .filter-section {
-    width: 100%;
+    width: 
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-around;
-    gap: 10px;
+    justify-content: center;
   }
-}
-
-#choose-sort, #choose-filter {
-  display: block;
-  max-width: 250px;
 }
 
 .psn-grid {

@@ -319,7 +319,7 @@
 
 
 
-// SORT SECTION
+  // SORT SECTION
 const sortSelect = document.getElementById("sort");
 const sortAreOnPage = document.querySelector(".search-container");
 if (sortAreOnPage) {

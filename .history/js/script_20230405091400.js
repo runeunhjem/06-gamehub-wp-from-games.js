@@ -319,25 +319,29 @@
 
 
 
-// SORT SECTION
-const sortSelect = document.getElementById("sort");
-const sortAreOnPage = document.querySelector(".search-container");
-if (sortAreOnPage) {
-  sortSelect.addEventListener("change", (event) => {
-    const selectedSort = event.target.value;
-    let sortedGames = games;
-    if (selectedSort === "Price (Low to High)") {
-      sortedGames = sortedGames.sort((a, b) => parseFloat(a.currentPrice) - parseFloat(b.currentPrice));
-    } else if (selectedSort === "Price (High to Low)") {
-      sortedGames = sortedGames.sort((a, b) => parseFloat(b.currentPrice) - parseFloat(a.currentPrice));
-    } else if (selectedSort === "Name (A to Z)") {
-      sortedGames = sortedGames.sort((a, b) => a.itemName.localeCompare(b.itemName));
-    } else if (selectedSort === "Name (Z to A)") {
-      sortedGames = sortedGames.sort((a, b) => b.itemName.localeCompare(a.itemName));
-    }
+  // FILTER SECTION
+  const filterSelect = document.getElementById("filters");
+  const filtersAreOnPage = document.querySelector(".search-container");
+  if (filtersAreOnPage) {
+    filterSelect.addEventListener("change", (event) => {
+      const selectedFilter = event.target.value;
+      let filteredGames = games;
+      if (selectedFilter === "Playstation 4" || selectedFilter === "Playstation 5") {
+        filteredGames = filteredGames.filter((game) => game.platform === selectedFilter);
+      } else if (selectedFilter === "Full Disc Versions" || selectedFilter === "Key only Versions") {
+        filteredGames = filteredGames.filter((game) => {
+          if (selectedFilter === "Full Disc Versions" && game.type === "Disc") {
+            return true;
+          } else if (selectedFilter === "Key only Versions" && game.type === "Key") {
+            return true;
+          } else {
+            return false;
+          }
+        });
+      }
 
-      // Regenerate the HTML for the sorted games
-      const sortedHtml = sortedGames
+      // Regenerate the HTML for the filtered games
+      const filteredHtml = filteredGames
         .map((game) => {
           const heartIcon = parseInt(game.isWishlisted) === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
           const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
@@ -400,6 +404,6 @@ if (sortAreOnPage) {
       .join("");
 
       // Set the HTML of the gamesContainer element to the filtered HTML
-      gamesContainer.innerHTML = sortedHtml;
+      gamesContainer.innerHTML = filteredHtml;
     });
   };

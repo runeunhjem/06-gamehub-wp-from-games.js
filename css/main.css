@@ -1076,10 +1076,10 @@ input {
   border: var(--border-1px-yellow);
 }
 
-#filters {
-  width: 200px;
+#filters, #sort {
+  width: 250px;
   padding: 5px;
-  margin-top: 15px;
+  margin-top: 5px;
   color: #7b7a7a;
   background-color: var(--color-black);
 }
@@ -1270,13 +1270,14 @@ legend {
 /* Playstation LIST Page */
 .search-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   margin-bottom: 1em;
-  gap: 1em;
   width: 100%;
   padding: 0 1em;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
 
 #search, select {
@@ -1329,20 +1330,29 @@ legend {
 }
 
 #search-field {
-  display: block;
-  width: 260px;
-  height: 150px;
+  display: flex;
   border: 1px solid var(--color-yellow-logo);
   padding: 0.5em 0 0.6em 0;
   border-radius: var(--border-radius-boxes);
   color: var(--color-white);
   background-color: var(--color-black-60);
   margin-bottom: 1em;
+  flex-wrap: wrap;
 }
 #search-field .filter-section {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+#choose-sort, #choose-filter {
+  display: block;
+  max-width: 250px;
 }
 
 .psn-grid {

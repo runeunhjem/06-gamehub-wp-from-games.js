@@ -1162,7 +1162,7 @@ input {
   }
 }
 #filters, #sort {
-  width: 250px;
+  width: 200px;
   padding: 5px;
   margin-top: 5px;
   color: #7b7a7a;
@@ -1446,13 +1446,13 @@ legend {
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
-    gap: 10px;
+    gap: 
   }
 }
 
 #choose-sort, #choose-filter {
   display: block;
-  max-width: 250px;
+  max-width: 210px;
 }
 
 .psn-grid {
