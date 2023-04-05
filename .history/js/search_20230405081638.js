@@ -27,36 +27,31 @@ setTimeout(() => {
         : games.filter((game) => game.itemName.toLowerCase().includes(searchTerm.toLowerCase()));
 
     filteredGames.forEach((game) => {
-      // filter.addEventListener("change", function () {
-      //   const selectedPlatform = filter.value;
-      //   const target = event.target; /// HERE I MUST DO SOMETHING
-      //   const gameID = target.dataset.id; /// HERE I MUST DO SOMETHING
-      //   // console.log("gameID is: ", gameID); /// HERE I MUST DO SOMETHING
-      //   const game = games.find((game) => game.id === gameID); /// HERE I MUST DO SOMETHING
-      //   console.log("game is: ", game); /// HERE I MUST DO SOMETHING
-      //   // console.log("game.id is: ", game.id); /// HERE I MUST DO SOMETHING
+      filter.addEventListener("change", function () {
+        const selectedPlatform = filter.value;
+        const target = event.target; /// HERE I MUST DO SOMETHING
+        const gameID = target.dataset.id; /// HERE I MUST DO SOMETHING
+        console.log("gameID is: ", gameID); /// HERE I MUST DO SOMETHING
+        const game = games.find((game) => game.id === gameID); /// HERE I MUST DO SOMETHING
+        if(game.isWishlisted) {
+          const heartIcon = parseInt(game.isWishlisted) === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
+        } else {
+          const heartIcon = "images/ico_heart_+.svg";
+        };
+        const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
 
-      //   if(game) {
-      //     const heartIcon = parseInt(game.isWishlisted) === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
-      //     const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
-      //   } else {
-      //     const heartIcon = "images/ico_heart_+.svg";
-      //     const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
-      //   };
-
-
-      //   gamesContainer.innerHTML = "";
-      //   let filteredGames =
-      //     searchTerm.length === 0
-      //       ? games
-      //       : games.filter((game) => game.itemName.toLowerCase().includes(searchTerm.toLowerCase()));
-      //   if (selectedPlatform !== "all") {
-      //     filteredGames = filteredGames.filter((game) => game.platform === selectedPlatform);
-      //   }
-      //   // filteredGames.forEach((game) => {
-      //   //   // append game to gamesContainer
-      //   // });
-      // });
+        gamesContainer.innerHTML = "";
+        let filteredGames =
+          searchTerm.length === 0
+            ? games
+            : games.filter((game) => game.itemName.toLowerCase().includes(searchTerm.toLowerCase()));
+        if (selectedPlatform !== "all") {
+          filteredGames = filteredGames.filter((game) => game.platform === selectedPlatform);
+        }
+        // filteredGames.forEach((game) => {
+        //   // append game to gamesContainer
+        // });
+      });
       const heartIcon = parseInt(game.isWishlisted) === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
       const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
       gamesContainer.innerHTML += `
