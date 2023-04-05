@@ -92,7 +92,7 @@
     const price = parseFloat(container.querySelector(".currentPrice").textContent);
     const platformShort = container.querySelector(".gametitle-info").textContent;
     const total = price * quantity;
-    const featured = game.featured;
+    const featured
     const formattedTotal = total.toFixed(2);
     const product = {
       id: parseInt(gameID),
@@ -100,8 +100,8 @@
       coverImage: coverImage,
       isWishlisted: isWishlisted,
       quantity: quantity,
-      price: parseFloat(price),
-      total: parseFloat(formattedTotal),
+      price: price,
+      total: formattedTotal,
       platformShort: platformShort,
       featured: featured,
     };

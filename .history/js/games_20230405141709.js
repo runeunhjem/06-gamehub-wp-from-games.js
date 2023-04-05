@@ -37,7 +37,7 @@ fetch(apiUrl)
         productPlot: attributes[14].productPlot,
         productGameplay: attributes[15].productGameplay,
         productKeyFeatures: attributes[16].productKeyFeatures,
-        featured: parseInt(attributes[17].featured),
+        
       };
       games.push(game);
     }

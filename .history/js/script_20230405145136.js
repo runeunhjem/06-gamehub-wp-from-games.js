@@ -100,8 +100,8 @@
       coverImage: coverImage,
       isWishlisted: isWishlisted,
       quantity: quantity,
-      price: parseFloat(price),
-      total: parseFloat(formattedTotal),
+      price: price,
+      total: parseFloat(formattedTotal,
       platformShort: platformShort,
       featured: featured,
     };

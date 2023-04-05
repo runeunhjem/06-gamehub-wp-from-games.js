@@ -254,7 +254,7 @@ fetch(apiUrl)
           quantity: quantity,
           price: currentPrice,
           platformShort: `${platformShort} | ${type} Version`,
-          total: parseFloat(formattedTotal),
+          total: parseFloat(formattedTotal,
         };
 
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -346,7 +346,7 @@ fetch(apiUrl)
         quantity: 1,
         currentPrice: currentPrice,
         beforePrice: beforePrice,
-        total: parseFloat(formattedTotal),
+        total: formattedTotal,
         platformShort: platformShort,
         productOverview: productOverview,
         productDescription: productDescription,

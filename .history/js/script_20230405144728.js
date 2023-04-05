@@ -92,7 +92,6 @@
     const price = parseFloat(container.querySelector(".currentPrice").textContent);
     const platformShort = container.querySelector(".gametitle-info").textContent;
     const total = price * quantity;
-    const featured = game.featured;
     const formattedTotal = total.toFixed(2);
     const product = {
       id: parseInt(gameID),
@@ -100,10 +99,9 @@
       coverImage: coverImage,
       isWishlisted: isWishlisted,
       quantity: quantity,
-      price: parseFloat(price),
-      total: parseFloat(formattedTotal),
+      price: price,
+      total: formattedTotal,
       platformShort: platformShort,
-      featured: featured,
     };
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -157,7 +155,6 @@
       const releaseDate = game.releaseDate;
       const region = game.region;
       const isWishlisted = 1;
-      const quantity = 1;
       const platform = game.platform;
       const gamespotRating = game.gamespotRating;
       const total = parseFloat(currentPrice);
@@ -181,7 +178,7 @@
         region: region,
         platform: platform,
         gamespotRating: gamespotRating,
-        quantity: quantity,
+        quantity: 1,
         currentPrice: parseInt(currentPrice) * quantity,
         beforePrice: beforePrice,
         total: parseFloat(formattedTotal),
