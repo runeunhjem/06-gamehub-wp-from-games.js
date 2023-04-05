@@ -258,9 +258,7 @@ const sortAreOnPage = document.querySelector(".choose-sort");
 if (sortAreOnPage) {
   sortSelect.addEventListener("change", (event) => {
     const selectedSort = event.target.value;
-    let sortedGames = searchQuery.length === 0
-      ? games
-      : games.filter((game) => game.itemName.toLowerCase().includes(searchTerm.toLowerCase()));
+    let sortedGames = games;
     if (selectedSort === "Price (Low to High)") {
       sortedGames = sortedGames.sort((a, b) => parseFloat(a.currentPrice) - parseFloat(b.currentPrice));
     } else if (selectedSort === "Price (High to Low)") {

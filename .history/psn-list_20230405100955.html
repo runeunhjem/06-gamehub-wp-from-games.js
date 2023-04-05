@@ -22,10 +22,10 @@
     <!-- <link rel="stylesheet" href="css/psnlist.css"> -->
     <link rel="stylesheet" href="css/out-of-view-menu-text.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- <script defer src="js/wishlist.js" type="module"></script> -->
     <script defer src="js/script.js" type="module"></script>
-    <script defer src="js/search.js" type="module"></script>
-
-    <title>Game Hub | Search Results</title>
+    <script defer src="js/psnlist.js" type="module"></script>
+    <title>Game Hub | Playstation Games</title>
   </head>
   <body>
     <header>
@@ -91,7 +91,7 @@
     <main id="main">
       <div class="main__wrapper">
         <section class="psn-grid" aria-label="Playstation Page | Main Section">
-          <h2 class="playstation-list-header">Search Results</h2>
+          <h2 class="playstation-list-header">Playstation</h2>
           <fieldset id="search-field">
             <legend>Filter</legend>
             <div class="search-container">
@@ -111,18 +111,18 @@
                   <label for="sort">Choose your sorting option:</label>
                   <select id="sort" name="sort">
                     <option value="">Sort by</option>
-                    <option value="Price (Low to High)">Price (Low to High)</option>
-                    <option value="Price (High to Low)">Price (High to Low)</option>
-                    <option value="Release Date (Newest First)">Release Date (Newest First)</option>
-                    <option value="Release Date (Oldest First)">Release Date (Oldest First)</option>
-                    <option value="Name (A to Z)">Name (A to Z)</option>
-                    <option value="Name (Z to A)">Name (Z to A)</option>
+                    <option value="Price (low to high)">Price (Low to High)</option>
+                    <option value="Price (high to low)">Price (High to Low)</option>
+                    <option value="Release date (newest first)">Release Date (newest first)</option>
+                    <option value="Release date (oldest first)">Release date (oldest first)</option>
                   </select>
                 </div>
               </div>
             </div>
           </fieldset>
-          <div class="image-mockup psn__wrapper" id="games-container"></div>
+          <div class="image-mockup psn__wrapper" id="games-container">
+            <!-- <div class="game-container" id="game-container"></div> -->
+          </div>
         </section>
         <div class="spacer"></div>
       </div>

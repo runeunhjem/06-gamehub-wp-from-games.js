@@ -330,10 +330,10 @@ if (sortAreOnPage) {
       sortedGames = sortedGames.sort((a, b) => parseFloat(a.currentPrice) - parseFloat(b.currentPrice));
     } else if (selectedSort === "Price (High to Low)") {
       sortedGames = sortedGames.sort((a, b) => parseFloat(b.currentPrice) - parseFloat(a.currentPrice));
-    } else if (selectedSort === "Release Date (Newest First)") {
-      sortedGames = sortedGames.sort((a, b) => a.releaseDate.localeCompare(b.releaseDate));
-    } else if (selectedSort === "Release Date (Oldest First)") {
-      sortedGames = sortedGames.sort((a, b) => b.releaseDate.localeCompare(a.releaseDate));
+    } else if (selectedSort === "Name (A to Z)") {
+      sortedGames = sortedGames.sort((a, b) => a.releaseDate.localeCompare(b.itemName));
+    } else if (selectedSort === "Name (Z to A)") {
+      sortedGames = sortedGames.sort((a, b) => b.itemName.localeCompare(a.itemName));
     } else if (selectedSort === "Name (A to Z)") {
       sortedGames = sortedGames.sort((a, b) => a.itemName.localeCompare(b.itemName));
     } else if (selectedSort === "Name (Z to A)") {
