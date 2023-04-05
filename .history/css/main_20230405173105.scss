@@ -420,21 +420,19 @@ main {
   .buy-sell_buttons {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 70%;
-    margin-top: 2em;
+    margin-top: 5em;
     img:hover {
       transform: scale(1.5);
     }
   }
   .buy-sell_buttons img {
-    width: 6vw;
+    width: 12vh;
     border-radius: 50%;
     transition: all 0.3s;
   }
   .buy-sell_buttons a {
     border-radius: 50%;
-    align-items: center;
   }
 
   .logo__main {
@@ -1503,17 +1501,13 @@ legend {
     background-position: left;
   }
 }
+
 .weeks-featured {
   display: flex;
   align-items: center;
-  text-align: flex-start;
+  text-align: center;
   justify-content: center;
-  min-height: 40px;
-  // max-height: 80px;
-  p {
-    font-size: 5vw;
-    text-align: center;
-  }
+  min-height: 100px;;
 }
 
 #games-container, #featured-container {
@@ -2513,7 +2507,7 @@ a:hover {
     }
   }
   .buy-sell_buttons img {
-    width: 15vw;
+    width: 15vh;
   }
   .cart-buttons {
     width: 200px;

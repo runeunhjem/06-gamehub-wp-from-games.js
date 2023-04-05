@@ -1509,10 +1509,14 @@ legend {
   text-align: flex-start;
   justify-content: center;
   min-height: 40px;
-  // max-height: 80px;
+  max-height: 80px;
+  // .featured-week {
+  // }
   p {
-    font-size: 5vw;
+    // width: 50%;
+    font-size: 5vh;
     text-align: center;
+    // white-space: nowrap;
   }
 }
 

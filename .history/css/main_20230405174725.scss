@@ -1509,11 +1509,15 @@ legend {
   text-align: flex-start;
   justify-content: center;
   min-height: 40px;
-  // max-height: 80px;
   p {
+    // width: 50%;
     font-size: 5vw;
     text-align: center;
+    // white-space: nowrap;
   }
+}
+.featured-weeks {
+  max-height: 90%;
 }
 
 #games-container, #featured-container {

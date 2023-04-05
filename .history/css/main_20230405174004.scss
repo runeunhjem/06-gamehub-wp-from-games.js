@@ -1503,16 +1503,18 @@ legend {
     background-position: left;
   }
 }
-.weeks-featured {
+
+.weeks-featured, .featured-weeks {
   display: flex;
   align-items: center;
   text-align: flex-start;
   justify-content: center;
   min-height: 40px;
-  // max-height: 80px;
+  width: 50%;
   p {
-    font-size: 5vw;
+    font-size: 2.5rem;
     text-align: center;
+    white-space: no;
   }
 }
 

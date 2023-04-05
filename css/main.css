@@ -380,19 +380,21 @@ main {
 .index .buy-sell_buttons {
   display: flex;
   justify-content: space-around;
-  width: 90%;
-  margin-top: 5em;
+  align-items: center;
+  width: 70%;
+  margin-top: 2em;
 }
 .index .buy-sell_buttons img:hover {
   transform: scale(1.5);
 }
 .index .buy-sell_buttons img {
-  width: 12vh;
+  width: 6vw;
   border-radius: 50%;
   transition: all 0.3s;
 }
 .index .buy-sell_buttons a {
   border-radius: 50%;
+  align-items: center;
 }
 .index .logo__main {
   display: flex;
@@ -1400,6 +1402,14 @@ legend {
 }
 
 .weeks-featured {
+  display: flex;
+  align-items: center;
+  text-align: flex-start;
+  justify-content: center;
+  min-height: 40px;
+}
+.weeks-featured p {
+  font-size: 5vw;
   text-align: center;
 }
 
@@ -2375,7 +2385,7 @@ a:hover {
     grid-area: navbar;
   }
   .buy-sell_buttons img {
-    width: 15vh;
+    width: 15vw;
   }
   .cart-buttons {
     width: 200px;
