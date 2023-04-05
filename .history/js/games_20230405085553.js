@@ -3,7 +3,7 @@ const games = [];
 const apiUrl = "https://wordpress.runeunhjem.no/wp-json/wc/store/products?per_page=50";
 const gamesContainer = document.getElementById("games-container");
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-console.log("wishlist is: ", wishlist);
+
 // Send a GET request to the API endpoint
 fetch(apiUrl)
   .then((response) => {

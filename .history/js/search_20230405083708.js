@@ -27,6 +27,7 @@ setTimeout(() => {
         : games.filter((game) => game.itemName.toLowerCase().includes(searchTerm.toLowerCase()));
 
     filteredGames.forEach((game) => {
+      
       const heartIcon = parseInt(game.isWishlisted) === 1 ? "images/ico_heart.svg" : "images/ico_heart_+.svg";
       const typeIcon = game.type === "Key" ? "images/ico_key.svg" : "images/ico_disc.svg";
       gamesContainer.innerHTML += `
